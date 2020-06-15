@@ -33,6 +33,10 @@ a.contacts_tel:hover {
 }
 
 .user_widget {
+	align-self: center;
+}
+
+.user_widget ul{
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -44,18 +48,37 @@ a.contacts_tel:hover {
 	width: 146px;
 }
 
-.user_widget a:hover {
+.user_widget ul li a {
+	display: inline-block;
+}
+
+.user_widget ul li a:hover {
 	transform: scale(1.2);
 }
 
 
-.menu-btn {
-	display: block;
+/*.menu-btn {
+	border: none;
 	width: 30px;
 	height: 16px;
 	align-self: center;
     position: relative;
+    cursor: pointer;
+}*/
+
+/*.menu-btn {
+	display: inline-block;
+    position: relative;
+    overflow: hidden;
+    width: 30px;
+    height: 16px;
+    font-size: 0;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
 }
+
 
 .menu-btn > span,
 .menu-btn > span::before,
@@ -75,7 +98,46 @@ a.contacts_tel:hover {
 .menu-btn > span::after {
   content: '';
   top: 8px;
+}*/
+
+.menu-btn {
+  border: none;
+  background-color: transparent;
+  position: relative;
 }
+
+.menu-btn span {
+  position: absolute;
+  right: -1px;
+  top: 9px;
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.menu-btn span::before {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 2px;
+  transform: translateY(8px);
+  background-color: #fff;
+  transition: .2s;
+}
+
+.menu-btn span::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 2px;
+  transform: translateY(-10px);
+  background-color: #fff;
+  transition: .2s;
+}
+
+
+
+
 
 .header_center {
 	position: relative;
